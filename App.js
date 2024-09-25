@@ -6,6 +6,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import AuthSignIn from './app/pages/AuthSignIn/AuthSignIn';
 import AuthSignUp from './app/pages/AuthSignUp/AuthSignUp';
 import HomeScreen from './app/pages/Home/HomeScreen';
+import SearchScreen from './app/pages/Search/SearchScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -19,7 +20,8 @@ const App = () => {
           options={{headerShown: false}}
         />
         <Stack.Screen name="SignUp" component={AuthSignUp} options={{headerShown:false}} />
-        <Stack.Screen name="Login" component={HomeScreen} options={{headerShown:false}} />
+        <Stack.Screen name="Home" component={HomeScreen} options={{headerShown:false}} />
+        <Stack.Screen name="Search" component={SearchScreen} options={{headerShown:false}} />
 
       </Stack.Navigator>
     </NavigationContainer>

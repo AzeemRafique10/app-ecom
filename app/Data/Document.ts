@@ -1,5 +1,0 @@
-const document = [
-    {
-        email: 'Email'
-    }
-]

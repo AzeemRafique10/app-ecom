@@ -17,7 +17,7 @@ const AuthSignIn = ({navigation}) => {
       navigation.navigate('SignUp')
     }
     const handleToSignIn =( )=>{
-      navigation.navigate('Login')
+      navigation.navigate('Home')
     }
   return (
     <View style={styles.container}>
