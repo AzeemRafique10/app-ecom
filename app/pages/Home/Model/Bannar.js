@@ -1,33 +1,49 @@
 import {
-  ScrollView,
   StyleSheet,
   Text,
   View,
   Image,
   TouchableOpacity,
+  FlatList,
 } from 'react-native';
 import React from 'react';
-import {DATA} from '../../../Data/Alldata'; // Assuming DATA contains title and image URL.
+import {DATA} from '../../../Data/Alldata';
 import ArrowRight from '../../../assets/Icon/ArrowRight';
+import {useNavigation} from '@react-navigation/native';
 
 const Bannar = () => {
-  const {title, URL} = DATA;
-  return (
+  const navigation = useNavigation();
+  const {bannerCard} = DATA;
+
+  const renderItem = ({item}) => (
     <View style={styles.container}>
       <View style={styles.card}>
         {/* Left section with title and button */}
         <View style={styles.titleWithButton}>
-          <Text style={styles.text}>{title}</Text>
-          <TouchableOpacity style={styles.shopButton}>
+          <Text style={styles.text}>{item.title}</Text>
+          <TouchableOpacity
+            style={styles.shopButton}
+            onPress={() => navigation.navigate('Explore')}>
             <Text style={styles.shopText}>Shop Now </Text>
             <ArrowRight />
           </TouchableOpacity>
         </View>
 
         {/* Right section with the image */}
-        <Image style={styles.image} source={URL} />
+        <Image style={styles.image} source={item.URL} />
       </View>
     </View>
+  );
+
+  return (
+    <FlatList
+      data={bannerCard}
+      renderItem={renderItem}
+      keyExtractor={(item, index) => index.toString()}
+      horizontal={true}
+      contentContainerStyle={{paddingHorizontal: 10}}
+      showsHorizontalScrollIndicator={false}
+    />
   );
 };
 
@@ -35,17 +51,17 @@ export default Bannar;
 
 const styles = StyleSheet.create({
   container: {
-    height: 200,
-    width: '100%',
+    height: 178,
+    width: 326,
+    marginRight: 10,
+    marginLeft: 10,
     justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#f5f5f5',
   },
   card: {
     flexDirection: 'row',
-    width: '90%',
-    height: '95%',
-    backgroundColor: 'white',
+    width: 326,
+    height: 178,
+    backgroundColor: '#fff',
     justifyContent: 'space-around',
     alignItems: 'center',
     padding: 10,

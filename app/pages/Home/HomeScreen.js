@@ -1,16 +1,12 @@
-import {StyleSheet, TextInput, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import AudioLogo from '../../assets/logo/AudioLogo';
 import Avator from '../../assets/avator/Avator';
 import MenuVariant from '../../assets/Icon/MenuVariant';
 import {Text} from '@rneui/themed';
-import Search from '../../assets/Icon/Search';
-import Models from './Model/Models';
-import Bannar from './Model/Bannar';
-import FeaturedProduct from './FeaturedProduct';
-import Cards from './Cards';
 import {DATA} from '../../Data/Alldata';
 import InputText from '../../components/InputText/InputText';
+import Models from './Model/Models';
 
 const HomeScreen = ({navigation}) => {
   const {home} = DATA;
@@ -39,19 +35,7 @@ const HomeScreen = ({navigation}) => {
       </View>
       {/* Section 3: Search Bar */}
       <InputText onFocus={() => handleToSearch()} />
-      {/* Section 4: Categories */}
-      <View style={styles.model}>
-        <Models />
-      </View>
-      <Bannar />
-
-      {/* Text Section */}
-
-      <FeaturedProduct />
-
-      {/* Section 5: Banners */}
-
-      <Cards />
+      <Models />
     </View>
   );
 };
@@ -98,26 +82,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#000',
     width: '80%',
-  },
-  // model
-  model: {
-    flex: 1,
-    backgroundColor: '#F3F3F4',
-    height: '100%',
-    width: '100%',
-    marginTop: 20,
-    borderTopLeftRadius: 30,
-    borderTopRightRadius: 30,
-  },
-  // bandage
-  bandage: {
-    backgroundColor: '#0ACF83',
-    width: 100,
-    height: 27,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 20,
-    marginLeft: 20,
-    marginTop: 30,
   },
 });

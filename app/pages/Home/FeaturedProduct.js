@@ -3,9 +3,11 @@ import React from 'react';
 
 const FeaturedProduct = () => {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Featured Products</Text>
-      <Text style={{fontSize: 16}}>See All</Text>
+    <View style={{marginTop: 5}}>
+      <View style={styles.container}>
+        <Text style={styles.text}>Featured Products</Text>
+        <Text style={{fontSize: 16}}>See All</Text>
+      </View>
     </View>
   );
 };
@@ -16,13 +18,13 @@ const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
     width: '90%',
-    height: 60,
+    height: 30,
     justifyContent: 'space-between',
     alignItems: 'center',
   },
   text: {
-    fontSize: 18, 
-    color: '#000', 
-    fontWeight: '400'
+    fontSize: 18,
+    color: '#000',
+    fontWeight: '400',
   },
 });

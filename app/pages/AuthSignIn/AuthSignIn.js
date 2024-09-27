@@ -12,74 +12,89 @@ import Mail from '../../assets/Icon/Mail';
 import Lock from '../../assets/Icon/Lock';
 
 const AuthSignIn = ({navigation}) => {
-
-    const handleToSigUp = () => {
-      navigation.navigate('SignUp')
-    }
-    const handleToSignIn =( )=>{
-      navigation.navigate('Home')
-    }
+  const handleToSigUp = () => {
+    navigation.navigate('SignUp');
+  };
+  const handleToSignIn = () => {
+    navigation.navigate('Home');
+  };
   return (
     <View style={styles.container}>
       <ImageBackground
         source={Image10}
         style={styles.backgroundImage}
         resizeMode="cover">
-        <View style={styles.screen}>
-          <Text style={styles.headerTitle}>Audio</Text>
-          <Text
-            style={{
-              fontSize: 14,
-              color: '#fff',
-              fontWeight: 'bold',
-              shadowColor: '#fff',
-            }}>
-            It's modular and designed to last
-          </Text>
-        </View>
-        <View style={styles.screen}>
-          <View style={styles.screen1}>
-            <View style={styles.inputContainers}>
-              <Mail width={24} height={24} style={styles.icons} />
-              <TextInput
-                style={styles.inputFields}
-                placeholder="Email"
-                placeholderTextColor="#888"
-              />
-            </View>
-            <View style={styles.inputContainers}>
-              <Lock width={24} height={24} style={styles.icons} />
-              <TextInput
-                style={styles.inputFields}
-                placeholder="Pasword"
-                placeholderTextColor="#888"
-              />
-            </View>
-          </View>
-          <Text style={{color: '#fff', marginTop: 10, fontWeight: 'bold'}}>
-            Forgot Password
-          </Text>
-
-          <View
-            style={{
-              flex: 1,
-              justifyContent: 'center',
-              width: '100%',
-              alignItems: 'center',
-            }}>
-            <Button
-              title="Sign In"
-              color={'#0ACF83'}
-              containerStyle={styles.buttonBtn}
-              onPress={() => handleToSignIn()}
-            />
-            <Text style={{fontSize: 15, color: '#fff'}}>
-              Didn’t have any account?{' '}
-              <TouchableOpacity onPress={() => handleToSigUp()}>
-              <Text style={{color: '#0ACF83', textDecorationLine: 'underline'}} >
-                Sign Up here
-              </Text></TouchableOpacity>
+        <View style={{flex: 1, width: '90%'}}>
+          <View style={styles.screen}>
+            <Text style={styles.headerTitle}>Audio</Text>
+            <Text
+              style={{
+                fontSize: 14,
+                color: '#fff',
+                fontWeight: 'bold',
+                shadowColor: '#fff',
+              }}>
+              It's modular and designed to last
             </Text>
+          </View>
+          <View style={styles.screen}>
+            <View style={styles.screen1}>
+              <View style={styles.inputContainers}>
+                <Mail width={24} height={24} style={styles.icons} />
+                <TextInput
+                  style={styles.inputFields}
+                  placeholder="Email"
+                  placeholderTextColor="#888"
+                />
+              </View>
+              <View style={styles.inputContainers}>
+                <Lock width={24} height={24} style={styles.icons} />
+                <TextInput
+                  style={styles.inputFields}
+                  placeholder="Pasword"
+                  placeholderTextColor="#888"
+                />
+              </View>
+              <View
+                style={{
+                  width: '100%',
+                  height: 30,
+                  alignItems: 'center',
+                }}>
+                <Text style={{color: '#fff', fontSize: 14, fontWeight: 'bold'}}>
+                  Forgot Password
+                </Text>
+              </View>
+            </View>
+
+            <View
+              style={{
+                width: '100%',
+                height: 94,
+                alignItems: 'center',
+                justifyContent: 'space-between',
+              }}>
+              <View style={styles.buttonBtn}>
+                <Button
+                  title="Sign In"
+                  color={'#0ACF83'}
+                  onPress={() => handleToSignIn()}
+                />
+              </View>
+
+              <Text style={{fontSize: 15, color: '#fff'}}>
+                Didn’t have any account?{' '}
+                <TouchableOpacity onPress={() => handleToSigUp()}>
+                  <Text
+                    style={{
+                      color: '#0ACF83',
+                      textDecorationLine: 'underline',
+                    }}>
+                    Sign Up here
+                  </Text>
+                </TouchableOpacity>
+              </Text>
+            </View>
           </View>
         </View>
       </ImageBackground>
@@ -106,29 +121,22 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   screen: {
-    flex: 1,
     height: '50%',
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
   },
   screen1: {
-    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    width: '100%',
-    height: '50%',
-    gap: 5,
   },
 
   buttonBtn: {
     backgroundColor: '#0ACF83',
-    height: '30%',
-    textAlign: 'center',
+    height: 50,
     justifyContent: 'center',
     borderRadius: 10,
-    marginBottom: 50,
-    width: '90%',
+    width: '95%',
   },
   inputContainers: {
     flexDirection: 'row',
