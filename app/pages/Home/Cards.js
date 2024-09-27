@@ -6,6 +6,7 @@ const Cards = () => {
   const {cards} = DATA;
 
   const renderItem = ({item}) => (
+    <View style={{height:250,justifyContent:'center'}}>
     <View style={styles.card}>
       <View style={styles.image}>
         <Image source={item.image} />
@@ -17,6 +18,7 @@ const Cards = () => {
         </Text>
       </View>
     </View>
+    </View>
   );
 
   return (
@@ -26,6 +28,8 @@ const Cards = () => {
       keyExtractor={(item, index) => index.toString()}
       horizontal={true}
       contentContainerStyle={{paddingHorizontal: 10}}
+      showsHorizontalScrollIndicator={false}
+      
     />
   );
 };
