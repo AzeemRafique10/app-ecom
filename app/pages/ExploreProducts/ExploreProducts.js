@@ -3,6 +3,9 @@ import React from 'react';
 import ChevronLeft from '../../assets/Icon/ChevronLeft';
 import ShoppingCart from '../../assets/Icon/ShoppingCart';
 import {useNavigation} from '@react-navigation/native';
+import FilterBar from '../../components/Filter/Filters/Filters';
+import Badge from '../../components/Badge/Badge';
+import ExploreModel from './ExploreModel';
 
 const ExploreProducts = () => {
   const navigation = useNavigation();
@@ -31,12 +34,10 @@ const ExploreProducts = () => {
             height: 41,
             marginTop: 10,
             gap: 3,
-          }}>
-          <Text>hiasdasd</Text>
-          <Text>hiasdasd</Text>
-          <Text>hiasdasd</Text>
-        </View>
+          }}></View>
+        <FilterBar />
       </View>
+      <ExploreModel />
     </View>
   );
 };

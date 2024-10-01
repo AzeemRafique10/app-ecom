@@ -10,7 +10,8 @@ export const DATA = {
     {
       title: 'TMA-2 Modular Headphone',
       URL: require('../assets/images/Headphone.png'),
-    },{
+    },
+    {
       title: 'TMA-2 Modular Headphone',
       URL: require('../assets/images/Headphone.png'),
     },
@@ -66,6 +67,42 @@ export const DATA = {
       image: require('../assets/images/Headphone.png'),
       name: 'TMA-2 Move Wireless',
       price: 'USD 270',
+      rating: '4.6',
+      reviews: '85',
+    },
+  ],
+  // Explore Cards
+  exploreCards: [
+    {
+      image: '',
+      title: 'TMA-2 HD Wireless',
+      price: '350',
+      rating: '4.6',
+      reviews: '85',
+    },
+    {
+      image: '',
+      title: 'TMA-2 HD Wireless',
+      price: '350',
+      rating: '4.6',
+      reviews: '85',
+    },{
+      image: '',
+      title: 'TMA-2 HD Wireless',
+      price: '350',
+      rating: '4.6',
+      reviews: '85',
+    },
+    {
+      image: '',
+      title: 'TMA-2 HD Wireless',
+      price: '350',
+      rating: '4.6',
+      reviews: '85',
+    },{
+      image: '',
+      title: 'TMA-2 HD Wireless',
+      price: '350',
       rating: '4.6',
       reviews: '85',
     },
