@@ -1,12 +1,12 @@
 import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import AudioLogo from '../../assets/logo/AudioLogo';
-import Avator from '../../assets/avator/Avator';
 import MenuVariant from '../../assets/Icon/MenuVariant';
 import {Text} from '@rneui/themed';
 import {DATA} from '../../Data/Alldata';
 import InputText from '../../components/InputText/InputText';
 import Models from './Model/Models';
+import Avator from '../../components/Avatar/Avator';
 
 const HomeScreen = ({navigation}) => {
   const {home} = DATA;
@@ -23,9 +23,8 @@ const HomeScreen = ({navigation}) => {
           <AudioLogo />
           <Text style={styles.logoText}>{home.headers}</Text>
         </View>
-        <View>
-          <Avator />
-        </View>
+
+        <Avator />
       </View>
 
       {/* Section 2: Greeting Text */}
