@@ -31,7 +31,7 @@ const ExploreModel = () => {
         data={exploreCards}
         renderItem={renderItem}
         keyExtractor={(item, index) => index.toString()}
-        numColumns={2} // Set the number of columns for the grid
+        numColumns={2}
         contentContainerStyle={styles.fullcard}
         showsVerticalScrollIndicator={false}
       />
