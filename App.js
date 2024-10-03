@@ -8,6 +8,7 @@ import AuthSignUp from './app/pages/AuthSignUp/AuthSignUp';
 import HomeScreen from './app/pages/Home/HomeScreen';
 import SearchScreen from './app/pages/Search/SearchScreen';
 import ExploreProducts from './app/pages/ExploreProducts/ExploreProducts';
+import ProfileScreen from './app/pages/Profile/ProfileScreen';
 
 
 const Stack = createNativeStackNavigator();
@@ -21,6 +22,7 @@ const App = () => {
         <Stack.Screen name="Home" component={HomeScreen} options={{headerShown:false}} />
         <Stack.Screen name="Search" component={SearchScreen} options={{headerShown:false}} />
         <Stack.Screen name="Explore" component={ExploreProducts} options={{headerShown:false}} />
+        <Stack.Screen name="ProfileSet" component={ProfileScreen} options={{headerShown:false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
