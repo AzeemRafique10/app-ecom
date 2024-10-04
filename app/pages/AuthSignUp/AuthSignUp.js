@@ -21,68 +21,76 @@ const AuthSignUp = () => {
       source={Image10}
       style={styles.backgroundImage}
       resizeMode="cover">
-      <View style={styles.screen}>
-        <Text style={styles.headerTitle}>Audio</Text>
-        <Text
+      <View style={styles.container}>
+        <View style={styles.header}>
+          <Text style={styles.headerTitle}>Audio</Text>
+          <Text
+            style={{
+              fontSize: 14,
+              color: '#fff',
+              fontWeight: 'bold',
+              shadowColor: '#fff',
+            }}>
+            It's modular and designed to last
+          </Text>
+        </View>
+        {/* section 2 */}
+        <View style={styles.inputContainer}>
+          <View style={styles.inputContainers}>
+            <Mail width={24} height={24} style={styles.icons} />
+            <TextInput
+              style={styles.inputFields}
+              placeholder="Email"
+              placeholderTextColor="#888"
+            />
+          </View>
+          <View style={styles.inputContainers}>
+            <Lock width={24} height={24} style={styles.icons} />
+            <TextInput
+              style={styles.inputFields}
+              placeholder="Pasword"
+              placeholderTextColor="#888"
+            />
+          </View>
+          {/* SignUp button */}
+          <View style={styles.buttonContainers}>
+            <Button
+              title="Sign Up"
+              color={'#0ACF83'}
+              containerStyle={styles.buttonBtn}
+              onPress={() => console.log('Button Press!')}
+            />
+          </View>
+        </View>
+        {/* SignUp with Social Media Accounts */}
+        <View style={styles.section3}>
+          <TouchableOpacity style={styles.socialBox}>
+            <Apple />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.socialBox}>
+            <Facebook />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.socialBox}>
+            <Google />
+          </TouchableOpacity>
+        </View>
+        {/* Section Text */}
+        <View
           style={{
-            fontSize: 14,
-            color: '#fff',
-            fontWeight: 'bold',
-            shadowColor: '#fff',
+            alignItems: 'center',
+            justifyContent: 'center',
+            flexDirection: 'row',
+            height: 40,
           }}>
-          It's modular and designed to last
-        </Text>
-      </View>
-      {/* section 2 */}
-      <View style={styles.screen}>
-        <View style={styles.inputContainers}>
-          <Mail width={24} height={24} style={styles.icons} />
-          <TextInput
-            style={styles.inputFields}
-            placeholder="Email"
-            placeholderTextColor="#888"
-          />
-        </View>
-        <View style={styles.inputContainers}>
-          <Lock width={24} height={24} style={styles.icons} />
-          <TextInput
-            style={styles.inputFields}
-            placeholder="Pasword"
-            placeholderTextColor="#888"
-          />
-        </View>
-        {/* SignUp button */}
-        <View style={styles.buttonContainers}>
-          <Button
-            title="Sign Up"
-            color={'#0ACF83'}
-            containerStyle={styles.buttonBtn}
-            onPress={() => console.log('Button Press!')}
-          />
-        </View>
-      </View>
-      {/* SignUp with Social Media Accounts */}
-      <View style={styles.section3}>
-        <TouchableOpacity style={styles.socialBox}>
-          <Apple />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.socialBox}>
-          <Facebook />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.socialBox}>
-          <Google />
-        </TouchableOpacity>
-      </View>
-      {/* Section Text */}
-      <View style={{flex: 0.5, flexDirection: 'row', }}>
-        <Text style={{fontSize: 15, color: '#fff', lineHeight: 20}}>
-          Didn’t have any account?{' '}
+          <Text style={{fontSize: 15, color: '#fff', lineHeight: 20}}>
+            Didn’t have any account?{' '}
+          </Text>
           <TouchableOpacity onPress={() => console.log('Sign In')}>
             <Text style={{color: '#0ACF83', textDecorationLine: 'underline'}}>
               Sign In here
             </Text>
           </TouchableOpacity>
-        </Text>
+        </View>
       </View>
     </ImageBackground>
   );
@@ -91,20 +99,18 @@ const AuthSignUp = () => {
 export default AuthSignUp;
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
   backgroundImage: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
   },
-  screen: {
-    flex: 1,
-    height: '50%',
+  container: {
+    width: '90%',
+    height: '100%',
+  },
+  header: {
+    height: '40%',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '100%',
   },
   headerTitle: {
     fontFamily: 'DM-SANS-Regular',
@@ -113,6 +119,12 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 10,
   },
+  inputContainer: {
+    height: 200,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+
   inputContainers: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -125,19 +137,15 @@ const styles = StyleSheet.create({
   },
   buttonContainers: {
     height: 50,
-    width: '96%',
-    flexDirection: 'column',
-    alignItems: 'center',
+    width: '100%',
     justifyContent: 'center',
-    borderWidth: 1,
-    borderColor: '#0ACF83',
     backgroundColor: '#0ACF83',
     borderRadius: 10,
     margin: 10,
   },
 
   inputFields: {
-    flex: 1,
+    width: '100%',
     height: 50,
     fontSize: 16,
   },
@@ -146,13 +154,11 @@ const styles = StyleSheet.create({
     opacity: 0.6,
   },
   section3: {
-    flex: 0.5,
-    flexDirection: 'row',
-    width: '100%',
-    height: 50,
-    justifyContent: 'center',
+    height: '15%',
     alignItems: 'center',
-    gap: 20,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    gap: 25,
   },
   socialBox: {
     backgroundColor: '#fff',
