@@ -8,9 +8,9 @@ const ProfileScreen = () => {
   const {profile} = DATA;
   return (
     <View style={styles.container}>
-      <View style={{flex: 1, width: '90%'}}>
+      <View style={styles.widthContainer}>
         <View>
-          <ProfileTopBar/>
+          <ProfileTopBar />
           <View style={styles.profileView}>
             <TouchableOpacity>
               <Image style={styles.photo} source={profile.image} />
@@ -21,7 +21,7 @@ const ProfileScreen = () => {
             </View>
           </View>
         </View>
-       <ProfileSettings/>
+        <ProfileSettings />
       </View>
     </View>
   );
@@ -36,6 +36,10 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     width: '100%',
     height: '100%',
+  },
+  widthContainer: {
+    flex: 1,
+    width: '90%',
   },
   profileView: {
     alignItems: 'center',
@@ -60,26 +64,4 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginTop: 10,
   },
-  // general
-  // general: {
-  //   // flex: 1,
-  //   marginTop: 30,
-  // },
-  // generalText: {
-  //   color: '#000',
-  //   fontSize: 16,
-  //   fontWeight: '500',
-  // },
-  // textStyle: {
-  //   height: 51,
-  //   borderBottomColor: '#EDEDED',
-  //   borderBottomWidth: 1,
-  //   justifyContent: 'center',
-  //   marginBottom: 10,
-  // },
-  // topic: {
-  //   fontSize: 16,
-  //   fontWeight: 'bold',
-  //   height: 58,
-  // },
 });
