@@ -53,19 +53,17 @@ const styles = StyleSheet.create({
   },
   fullcard: {
     width: '100%',
-    margin: 10, // Full width for grid alignment
-    // alignItems: 'center',
-    // paddingBottom: 50, // Space at the bottom
+    margin: 10,
   },
   card: {
-    width: '44%', // Adjust width for grid layout
+    width: '44%',
     height: 243,
     backgroundColor: 'white',
     borderRadius: 20,
     justifyContent: 'space-evenly',
     alignItems: 'center',
     marginTop: 10,
-    marginLeft: 10, // Space between grid items
+    marginLeft: 10,
   },
   image: {
     width: 125,

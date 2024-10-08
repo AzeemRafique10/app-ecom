@@ -6,18 +6,18 @@ const Cards = () => {
   const {cards} = DATA;
 
   const renderItem = ({item}) => (
-    <View style={{height:250,justifyContent:'center'}}>
-    <View style={styles.card}>
-      <View style={styles.image}>
-        <Image source={item.image} />
+    <View style={styles.container}>
+      <View style={styles.card}>
+        <View style={styles.image}>
+          <Image source={item.image} />
+        </View>
+        <View>
+          <Text style={styles.text}>{item.name}</Text>
+          <Text style={styles.text2}>
+            {item.price} {item.dollor}
+          </Text>
+        </View>
       </View>
-      <View>
-        <Text style={styles.text}>{item.name}</Text>
-        <Text style={styles.text2}>
-          {item.price} {item.dollor}
-        </Text>
-      </View>
-    </View>
     </View>
   );
 
@@ -29,7 +29,6 @@ const Cards = () => {
       horizontal={true}
       contentContainerStyle={{paddingHorizontal: 10}}
       showsHorizontalScrollIndicator={false}
-      
     />
   );
 };
@@ -37,6 +36,10 @@ const Cards = () => {
 export default Cards;
 
 const styles = StyleSheet.create({
+  container: {
+    height: 250,
+    justifyContent: 'center',
+  },
   card: {
     height: 235,
     width: 170,

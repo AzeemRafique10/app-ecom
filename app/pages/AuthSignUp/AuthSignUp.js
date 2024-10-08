@@ -24,13 +24,7 @@ const AuthSignUp = () => {
       <View style={styles.container}>
         <View style={styles.header}>
           <Text style={styles.headerTitle}>Audio</Text>
-          <Text
-            style={{
-              fontSize: 14,
-              color: '#fff',
-              fontWeight: 'bold',
-              shadowColor: '#fff',
-            }}>
+          <Text style={styles.headerTitle2}>
             It's modular and designed to last
           </Text>
         </View>
@@ -118,6 +112,12 @@ const styles = StyleSheet.create({
     color: '#fff',
     fontWeight: 'bold',
     marginBottom: 10,
+  },
+  headerTitle2: {
+    fontSize: 14,
+    color: '#fff',
+    fontWeight: 'bold',
+    shadowColor: '#fff',
   },
   inputContainer: {
     height: 200,
