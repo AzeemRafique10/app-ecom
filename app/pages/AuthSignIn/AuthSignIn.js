@@ -24,16 +24,10 @@ const AuthSignIn = ({navigation}) => {
         source={Image10}
         style={styles.backgroundImage}
         resizeMode="cover">
-        <View style={{flex: 1, width: '90%'}}>
+        <View style={styles.widthContainer}>
           <View style={styles.screen}>
             <Text style={styles.headerTitle}>Audio</Text>
-            <Text
-              style={{
-                fontSize: 14,
-                color: '#fff',
-                fontWeight: 'bold',
-                shadowColor: '#fff',
-              }}>
+            <Text style={styles.headerTitle2}>
               It's modular and designed to last
             </Text>
           </View>
@@ -55,25 +49,12 @@ const AuthSignIn = ({navigation}) => {
                   placeholderTextColor="#888"
                 />
               </View>
-              <View
-                style={{
-                  width: '100%',
-                  height: 30,
-                  alignItems: 'center',
-                }}>
-                <Text style={{color: '#fff', fontSize: 14, fontWeight: 'bold'}}>
-                  Forgot Password
-                </Text>
+              <View style={styles.passwordReset}>
+                <Text style={styles.forgotPassword}>Forgot Password</Text>
               </View>
             </View>
 
-            <View
-              style={{
-                width: '100%',
-                height: 94,
-                alignItems: 'center',
-                justifyContent: 'space-between',
-              }}>
+            <View style={styles.signInMethod}>
               <View style={styles.buttonBtn}>
                 <Button
                   title="Sign In"
@@ -113,12 +94,22 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  widthContainer: {
+    flex: 1,
+    width: '90%',
+  },
   headerTitle: {
     fontFamily: 'DM-SANS-Regular',
     fontSize: 51,
     color: '#fff',
     fontWeight: 'bold',
     marginBottom: 10,
+  },
+  headerTitle2: {
+    fontSize: 14,
+    color: '#fff',
+    fontWeight: 'bold',
+    shadowColor: '#fff',
   },
   screen: {
     height: '50%',
@@ -130,7 +121,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-
+  signInMethod: {
+    width: '100%',
+    height: 94,
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
   buttonBtn: {
     backgroundColor: '#0ACF83',
     height: 50,
@@ -152,6 +148,16 @@ const styles = StyleSheet.create({
     flex: 1,
     height: 50, // Adjust the height to fit the icon properly
     fontSize: 16,
+  },
+  passwordReset: {
+    width: '100%',
+    height: 30,
+    alignItems: 'center',
+  },
+  forgotPassword: {
+    color: '#fff',
+    fontSize: 14,
+    fontWeight: 'bold',
   },
   icons: {
     marginRight: 10,

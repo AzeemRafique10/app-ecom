@@ -1,14 +1,10 @@
-import { StyleSheet, View } from 'react-native'
-import React from 'react'
+import {StyleSheet, View} from 'react-native';
+import React from 'react';
 
 const Logo = () => {
-  return (
-    <View>
-  
-    </View>
-  )
-}
+  return <View></View>;
+};
 
-export default Logo
+export default Logo;
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({});

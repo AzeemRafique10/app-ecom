@@ -90,9 +90,7 @@ const styles = StyleSheet.create({
     height: '100%',
   },
   containerDrawer: {
-    // flex: 1,
     backgroundColor: '#F8F9FC',
-    // alignItems: 'center',
     width: '100%',
     height: '100%',
     marginLeft: 5,
@@ -152,7 +150,6 @@ const styles = StyleSheet.create({
   name: {
     fontSize: 18,
     fontWeight: '400',
-    // marginTop: 10,
   },
   email: {
     fontSize: 14,
