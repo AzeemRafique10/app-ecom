@@ -41,5 +41,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 10,
   },
-  text: {fontSize: 16, color: '#000', fontWeight: 'bold'},
+  text: {
+    fontSize: 16, 
+    color: '#000', 
+    fontWeight: 'bold'
+  },
 });

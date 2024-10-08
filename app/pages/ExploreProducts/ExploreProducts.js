@@ -4,7 +4,6 @@ import ChevronLeft from '../../assets/Icon/ChevronLeft';
 import ShoppingCart from '../../assets/Icon/ShoppingCart';
 import {useNavigation} from '@react-navigation/native';
 import FilterBar from '../../components/Filter/Filters/Filters';
-import Badge from '../../components/Badge/Badge';
 import ExploreModel from './ExploreModel';
 
 const ExploreProducts = () => {
@@ -65,7 +64,11 @@ const styles = StyleSheet.create({
     height: 23,
     alignItems: 'flex-end',
   },
-  texthead: {fontSize: 16, textAlign: 'left', color: '#000'},
+  texthead: {
+    fontSize: 16, 
+    textAlign: 'left', 
+    color: '#000'
+  },
   product_title1: {
     flexDirection: 'row',
     height: 32,
