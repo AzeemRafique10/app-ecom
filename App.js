@@ -10,7 +10,6 @@ import SearchScreen from './app/pages/Search/SearchScreen';
 import ExploreProducts from './app/pages/ExploreProducts/ExploreProducts';
 import ProfileScreen from './app/pages/Profile/ProfileScreen';
 
-
 const Stack = createNativeStackNavigator();
 
 const App = () => {
