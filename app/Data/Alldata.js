@@ -28,10 +28,6 @@ export const DATA = {
     name: 'Andrea Hirata',
     email: 'andrea@example.com',
     image: require('../assets/images/Eye.webp'),
-    // phone: '+1 123 456 7890',
-    // address: '123 Main St, City, State, Zip',
-    // orders: '2',
-    // points: '100',
   },
   //Features Products Cards
   cards: [
