@@ -97,15 +97,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   inactiveTab: {
-    backgroundColor: 'transparent', // No background for inactive tabs
+    backgroundColor: 'transparent',
   },
   activeText: {
-    color: '#fff', // White text for active tab
+    color: '#fff',
     fontWeight: 'bold',
     fontSize: 14,
   },
   inactiveText: {
-    color: '#9E9E9E', // Gray text for inactive tabs
+    color: '#9E9E9E',
     fontSize: 14,
   },
 });

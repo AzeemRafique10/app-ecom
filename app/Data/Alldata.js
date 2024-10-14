@@ -1,3 +1,4 @@
+// All data that is in Array
 export const DATA = {
   // Home Screen header
   home: {

@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     width: 45,
     height: 45,
     borderRadius: 30,
-    overflow: 'hidden', // Ensures the image doesn't overflow the container's border radius
+    overflow: 'hidden',
   },
   images: {
     width: '100%',
