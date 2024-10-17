@@ -1,16 +1,31 @@
-import {StyleSheet, Text, View, FlatList, Image} from 'react-native';
+import {
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import {DATA} from '../../Data/Alldata';
+import { useNavigation } from '@react-navigation/native';
 
 const Cards = () => {
+  const navigation = useNavigation();
   const {cards} = DATA;
+
+  const handleToProductDetails = () => {
+    navigation.navigate('ProductDetails');
+  };
 
   const renderItem = ({item}) => (
     <View style={styles.container}>
       <View style={styles.card}>
-        <View style={styles.image}>
+        <TouchableOpacity
+          style={styles.image}
+          onPress={() => handleToProductDetails()}>
           <Image source={item.image} />
-        </View>
+        </TouchableOpacity>
         <View>
           <Text style={styles.text}>{item.name}</Text>
           <Text style={styles.text2}>

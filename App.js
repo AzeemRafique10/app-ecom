@@ -1,5 +1,4 @@
 import React from 'react';
-
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
 import AuthSignIn from './app/pages/AuthSignIn/AuthSignIn';
@@ -8,6 +7,7 @@ import HomeScreen from './app/pages/Home/HomeScreen';
 import SearchScreen from './app/pages/Search/SearchScreen';
 import ExploreProducts from './app/pages/ExploreProducts/ExploreProducts';
 import ProfileScreen from './app/pages/Profile/ProfileScreen';
+import ProductDetailsOverview from './app/pages/ProductDetail/ProductDetail-Overview/ProductDetailsOverview';
 
 const Stack = createNativeStackNavigator();
 
@@ -21,6 +21,7 @@ const App = () => {
         <Stack.Screen name="Search" component={SearchScreen} options={{headerShown:false}} />
         <Stack.Screen name="Explore" component={ExploreProducts} options={{headerShown:false}} />
         <Stack.Screen name="ProfileSet" component={ProfileScreen} options={{headerShown:false}} />
+        <Stack.Screen name="ProductDetails" component={ProductDetailsOverview} options={{headerShown:false}} />
       </Stack.Navigator>
     </NavigationContainer>
   );
